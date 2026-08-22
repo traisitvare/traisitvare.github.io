@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "title": "SMM social media listening ",
+    "category": "infrastructure",
+    "desc": "ดูแล linux red hat แบบ on premise",
+    "tech": [
+      "Linux",
+      "social listening",
+      "MariaDB"
+    ],
+    "image": "assets/images/projects/project-1.png",
+    "images": [
+      "assets/images/portfolio/smm.png",
+      "assets/images/portfolio/maraidb.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Microsoft SQL Server",
+    "category": "database",
+    "desc": "SQL Server / SSMS / database performance",
+    "tech": [
+      "Bash",
+      "Cron"
+    ],
+    "image": "assets/images/projects/project-2.png",
+    "images": [
+      "assets/images/portfolio/workp2.png",
+      "assets/images/portfolio/workp2-1.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Nagios Monitoring",
+    "category": "monitoring",
+    "desc": "Nagios dashboard + alert/status monitoring",
+    "tech": [
+      "Nagios",
+      "NRPE",
+      "Alarm",
+      "Monitoring"
+    ],
+    "image": "assets/images/projects/project-3.png",
+    "images": [
+      "assets/images/portfolio/work-3.jpg",
+      "assets/images/portfolio/work-3.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Linux",
+    "category": "data",
+    "desc": "Oracle + SQL Server + MariaDB / database architecture",
+    "tech": [
+      "SQL",
+      "MariaDB"
+    ],
+    "image": "assets/images/projects/project-4.png",
+    "images": [
+      "assets/images/portfolio/linux.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Database",
+    "category": "database",
+    "desc": "REBUILD INDEX and UPDATE STATISTICS ",
+    "tech": [
+      "SQL Server",
+      "Oracle"
+    ],
+    "image": "assets/images/projects/project-5.png",
+    "images": [
+      "assets/images/portfolio/ssms1.png",
+      "assets/images/portfolio/ssmssql.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Grafana",
+    "category": "monitoring",
+    "desc": "Grafana dashboard + metrics/monitoring",
+    "tech": [
+      "Runbook",
+      "Process"
+    ],
+    "image": "assets/images/projects/project-6.png",
+    "images": [
+      "assets/images/portfolio/grafana.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "CI/CD — Rundeck",
+    "category": "automation",
+    "desc": "Rundeck + automation pipeline + deployment",
+    "tech": [
+      "Runbook",
+      "Process"
+    ],
+    "image": "assets/images/projects/project-7.png",
+    "images": [
+      "assets/images/portfolio/rundeck.png"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Operations Knowledge Base",
+    "category": "documentation",
+    "desc": "จัดทำ Runbook, WR and WR ",
+    "tech": [
+      "Runbook",
+      "Process"
+    ],
+    "image": "assets/images/projects/project-8.png"
+  
+  }
+]
