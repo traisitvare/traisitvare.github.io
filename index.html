@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CV และ Portfolio ของ Traisit Wareeratpakron, System Engineer">
+  <title>Traisit | System Engineer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">TRAISIT<span>.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#experience">ประสบการณ์</a>
+        <a href="education.html">การศึกษา</a>
+        <a href="#projects">ผลงาน</a>
+        <a href="#contact">ติดต่อ</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme" id="themeBtn" aria-label="สลับธีม">◐</button>
+        <button class="theme mobile" id="menuBtn" aria-label="เมนู">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <header class="container hero" id="home">
+      <div class="reveal">
+        <div class="eyebrow">Hello, I am</div>
+        <h1><span id="name">ไตรสิทธิ์</span><br><span class="gradient" id="nameEn">Traisit Wareeratpakron</span></h1>
+        <p class="lead" id="role"></p>
+        <p id="summary"></p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">ดูผลงาน</a>
+          <a class="btn" href="assets/pdf/cv-sample.pdf" download>ดาวน์โหลด CV</a>
+        </div>
+      </div>
+      <div class="portrait-wrap reveal">
+        <!-- เปลี่ยนรูปโปรไฟล์ได้ที่ assets/images/profile.svg หรือแก้ src ด้านล่าง -->
+        <img class="portrait" src="assets/images/profile_photo.png" alt="ภาพโปรไฟล์ Traisit">
+        <div class="float-card">⚡ Linux • DB • Monitoring</div>
+      </div>
+    </header>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">About</div><h2>แก้ปัญหาให้ระบบ<br>ทำงานได้อย่างมั่นคง</h2></div>
+          <p>เน้นการวิเคราะห์จากข้อมูลจริง สื่อสาร Root Cause ให้เข้าใจง่าย และเปลี่ยนบทเรียนจาก Incident เป็น Automation กับ Runbook</p>
+        </div>
+        <div class="about-grid">
+          <article class="card reveal"><h3>ความเชี่ยวชาญ</h3><div class="skills" id="skills"></div></article>
+          <article class="card reveal"><h3>แนวทางการทำงาน</h3><p>Observe → Analyze → Fix → Prevent</p><p>ตรวจสอบปํญหา แยกประเภท หาสาเหตุ แก้ไขและป้องกัน </p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">Experience</div><h2>ประสบการณ์ทำงาน</h2></div>
+          <a class="btn" href="work-experience.html">ดูทั้งหมด</a>
+        </div>
+        <!-- app.js จะนำข้อมูลจาก experience-data.json มาใส่ตรงนี้ -->
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SHORTCUT ==================== -->
+    <section id="education-preview">
+      <div class="container">
+        <div class="card education-preview reveal">
+          <div><div class="eyebrow">Education</div><h2>ประวัติการศึกษา</h2><p>วุฒิการศึกษา หลักสูตร และประกาศนียบัตรที่เกี่ยวข้อง</p></div>
+          <a class="btn primary" href="education.html">ดูประวัติการศึกษา</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">Selected work</div><h2>ผลงานเด่น</h2></div>
+          <p>ตัวอย่างงานด้าน Infrastructure, Monitoring, Database, Automation และ Operational Improvement</p>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">ทั้งหมด</button>
+          <button class="filter" data-filter="monitoring">Monitoring</button>
+          <button class="filter" data-filter="automation">Automation</button>
+          <button class="filter" data-filter="data">Data</button>
+          <button class="filter" data-filter="database">Database</button>
+        </div>
+        <!-- app.js จะสร้าง Project Cards และรูปผลงานจาก gallery-data.json -->
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="card contact reveal">
+          <div class="eyebrow">Contact</div><h2>Au</h2>
+          <p><span id="email"></span> • <span id="phone"></span></p>
+          <a class="btn primary" id="taisit1998@gmail.com" href="#">ส่งอีเมล</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer>
+  <div class="container">
+    © <span id="year"></span> Created by Traisit Wareeratpakron. Built HTML, CSS &amp; JavaScript.
+  </div>
+</footer>
+
+<!-- =========================================================
+     PROJECT IMAGE MODAL
+     ใช้สำหรับขยายรูปผลงาน โดยไม่เปิดหน้าใหม่
+     ========================================================= -->
+<div class="project-modal" id="projectModal">
+  <div class="project-modal-overlay"></div>
+
+  <div class="project-modal-content">
+
+    <!-- ปุ่มปิด -->
+    <button class="project-modal-close" id="projectModalClose">
+      ×
+    </button>
+
+    <!-- รูปก่อนหน้า -->
+    <button class="project-modal-prev" id="projectModalPrev">
+      ‹
+    </button>
+
+    <div class="project-modal-image-wrap">
+
+      <img
+        id="projectModalImage"
+        src=""
+        alt="Project image"
+      >
+
+      <!-- จุดแสดงรูป -->
+      <div class="project-modal-dots" id="projectModalDots"></div>
+
+    </div>
+
+    <!-- รูปถัดไป -->
+    <button class="project-modal-next" id="projectModalNext">
+      ›
+    </button>
+
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
