@@ -43,6 +43,7 @@
     ],
     "image": "assets/images/projects/project-3.png",
     "images": [
+      "assets/images/portfolio/work3-3.png",
       "assets/images/portfolio/work-3.jpg",
       "assets/images/portfolio/work-3.png"
     ]
@@ -54,11 +55,14 @@
     "desc": "Oracle + SQL Server + MariaDB / database architecture",
     "tech": [
       "SQL",
+      "Cron Job",
       "MariaDB"
     ],
     "image": "assets/images/projects/project-4.png",
     "images": [
-      "assets/images/portfolio/linux.png"
+      "assets/images/portfolio/linux.png",
+      "assets/images/portfolio/work-cronj.png",
+      "assets/images/portfolio/work-cronjob.png"
     ]
   },
   {
@@ -114,6 +118,40 @@
       "Process"
     ],
     "image": "assets/images/projects/project-8.png"
+  
+  }
+  ,
+  {
+    "id": 9,
+    "title": "Informatica CDC",
+    "category": "data",
+    "desc": "Change Data Capture (CDC) for real-time data integration and replication",
+    "tech": [
+      "Informatica",
+    "CDC",
+    "Data Replication",
+    "Database"
+    ],
+    "image": "assets/images/projects/project-9cdc.png"
+  
+  }
+  ,
+  {
+    "id": 10,
+    "title": "SCADA Monitoring",
+    "category": "monitoring",
+    "desc": "SCADA monitoring and control system for real-time industrial operations ",
+    "tech": [
+      "SCADA",
+    "Monitoring",
+    "Alarm"
+    ],
+    "image": "assets/images/projects/project-10.png",
+    "images": [
+      "assets/images/portfolio/work-10-1.png",
+      "assets/images/portfolio/work-10-2.png",
+      "assets/images/portfolio/work-10-3.png"
+    ]
   
   }
 ]
