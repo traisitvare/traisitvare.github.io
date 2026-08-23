@@ -1,0 +1,18 @@
+{
+  "name": "ไตรสิทธิ์ วารีรัตน์ภากร",
+  "nameEn": "Traisit Wareeratpakron",
+  "role": "System Engineer | CRM (APO) Operation Support",
+  "summary": "System Engineer มีประสบการณ์การทำงานและการใช้งาน Linux, Database, Monitoring และ Automation สำหรับระบบ Production on premise และ on cloud",
+  "email": "taisit1998@gmail.com",
+  "phone": "+66 93 198 9779",
+  "skills": [
+    "Linux Administration",
+    "Bash / Perl",
+    "MariaDB / MySQL",
+    "Oracle",
+    "Nagios / NRPE",
+    "Incident Management",
+    "Log Management",
+    "RCA & Automation"
+  ]
+}

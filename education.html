@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ประวัติการศึกษาของ Traisit Wareeratpakron">
+  <title>ประวัติการศึกษา | Traisit</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation: เพิ่มหรือลบเมนูได้ในส่วนนี้ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">TRAISIT<span>.</span></a>
+      <a class="btn" href="index.html">← กลับหน้าหลัก</a>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="eyebrow">Education</div>
+        <h1>ประวัติการศึกษา</h1>
+         <!--<p class="lead">แก้ข้อมูลในไฟล์ <code>education-data.json</code> และเปลี่ยนรูปใน <code>assets/images/education/</code></p> -->
+
+        <!-- JavaScript จะสร้าง Education Cards ลงใน Element นี้ -->
+        <div id="educationList" class="education-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // โหลดข้อมูลการศึกษาจาก JSON เพื่อให้แก้ข้อมูลได้โดยไม่ต้องแก้ HTML
+    fetch('education-data.json')
+      .then(response => response.json())
+      .then(items => {
+        document.getElementById('educationList').innerHTML = items.map(item => `
+          <article class="education-card card">
+            <img src="${item.image}" alt="${item.degree}" loading="lazy">
+            <div>
+              <div class="period">${item.period}</div>
+              <h2>${item.degree}</h2>
+              <div class="institution">${item.institution}</div>
+              <p>${item.description}</p>
+            </div>
+          </article>`).join('');
+      })
+      .catch(error => {
+        document.getElementById('educationList').innerHTML = '<p>ไม่สามารถโหลดข้อมูลการศึกษาได้</p>';
+        console.error(error);
+      });
+  </script>
+</body>
+</html>

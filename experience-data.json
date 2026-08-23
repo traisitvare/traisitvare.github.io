@@ -1,0 +1,62 @@
+[
+  {
+    "period": "ปัจจุบัน",
+    "role": "System Engineer",
+    "company": "Advanced Info Service Public Company Limited (System Engineer)",
+    "summary": "ดูแล Production, Database, Linux Server, Monitoring และ Automation เพื่อให้ระบบมีเสถียรภาพและพร้อมใช้งาน",
+    "details": [
+        "ดูแลระบบ Production และ High Availability ให้พร้อมใช้งาน มีเสถียรภาพ และสามารถให้บริการได้อย่างต่อเนื่อง",
+    "รับผิดชอบงานด้าน Database, Linux Server และ System โดยติดตามสถานะของระบบ วิเคราะห์ปัญหา และดำเนินการแก้ไขเมื่อพบความผิดปกติ",
+    "ตรวจสอบ Performance, Resource Utilization และ Capacity ของ Server และ Database เพื่อหาแนวโน้มและป้องกันปัญหาก่อนส่งผลกระทบต่อผู้ใช้งาน",
+    "วิเคราะห์และแก้ไข Incident ที่มีความซับซ้อน รวมถึงหา Root Cause และกำหนดแนวทางป้องกันไม่ให้ปัญหาเดิมเกิดซ้ำ",
+    "ดูแลฐานข้อมูล Microsoft SQL Server, Oracle, MariaDB และ MySQL ทั้งในด้าน Database Health, Performance, Connection, Query และการใช้ทรัพยากร",
+    "วิเคราะห์และปรับปรุง SQL Query รวมถึงแก้ไขปัญหา Stored Procedure ที่เกิดจากการเปลี่ยนแปลงหรือ Upgrade Database",
+    "วางแผนและดำเนินงาน Database Maintenance เช่น Index Maintenance, Update Statistics, Backup และตรวจสอบพื้นที่จัดเก็บของฐานข้อมูล",
+    "สนับสนุนงาน Database Upgrade โดยตรวจสอบความพร้อม ประเมินผลกระทบ ทดสอบการทำงาน และติดตามปัญหาหลังขึ้น Production",
+    "ดูแล Linux Server ครอบคลุม Process, Service, CPU, Memory, Disk, File System, Inode, Network Connection และ Cron Job",
+    "วิเคราะห์ปัญหา Service Down, Disk Space, Inode, Log Growth และ Resource Usage พร้อมแก้ไขและติดตามจนระบบกลับมาให้บริการได้ตามปกติ",
+    "วางแผนและปรับปรุงการจัดการ Log ทั้ง Log Rotation, Retention และ Archival เพื่อควบคุมการใช้พื้นที่และลดความเสี่ยงต่อระบบ Production",
+    "ออกแบบและพัฒนา Monitoring ด้วย Nagios/NRPE รวมถึงเขียน Custom Check ให้เหมาะกับ Application, Server, Database และ Service ที่รับผิดชอบ",
+    "ปรับ Threshold และเงื่อนไขการแจ้งเตือนจากข้อมูลการทำงานจริงของระบบ เพื่อลด False Alarm และช่วยให้ทีมตรวจพบปัญหาได้เร็วขึ้น",
+    "พัฒนา Shell Script และ Automation สำหรับงาน Monitoring, Log Management, Health Check, Maintenance และงานประจำที่ต้องทำซ้ำ",
+    "ตรวจสอบ Dependency และประเมินความเสี่ยงก่อนดำเนินการ Change, Deployment, Upgrade หรือแก้ไขปัญหาบน Production พร้อมเตรียม Rollback Plan ในกรณีที่เกิดปัญหา",
+    "วิเคราะห์ข้อมูลการทำงานของระบบและจัดทำรายงาน KPI, Minimum, Average และ Maximum เพื่อใช้ติดตาม Performance และแนวโน้มของระบบ",
+    "จัดทำและปรับปรุง Runbook, Work Instruction, Work Request และ Knowledge Base เพื่อให้ทีมมีขั้นตอนการทำงานที่ชัดเจนและสามารถใช้อ้างอิงได้จริง",
+    "ประสานงานกับทีม Developer, Application Support, DBA, Infrastructure และ Vendor เพื่อวิเคราะห์และแก้ไขปัญหาที่เกี่ยวข้องกับหลายระบบ",
+    "ให้คำแนะนำและช่วยตรวจสอบปัญหาทางเทคนิคภายในทีม โดยเฉพาะกรณี Production Incident หรือปัญหาที่ต้องวิเคราะห์ร่วมกันระหว่าง Application, Database และ Infrastructure",
+    "นำปัญหาที่พบจากงานประจำและ Incident มาปรับปรุง Monitoring, Script และขั้นตอนการทำงาน เพื่อลดงาน Manual ลดความผิดพลาด และเพิ่มความเสถียรของระบบ"
+    ]
+  }
+  ,
+  {
+    "period": "2025",
+    "role": "System  Engineer",
+    "company": "Data center",
+    "summary": "ดูแล SCADA, Data Center Monitoring, Infrastructure และ Automation ภายใน Data Center",
+    "details": [
+      "พัฒนาและดูแลโครงการ Data Center ได้แก่ SCADA, Data Center Monitoring และ Main Environmental Control Systems (ECMS) โดยใช้ EcoStruxure Power SCADA Expert (PME), EBO, Microsoft SQL Server, Docker และ VMware",
+      "ติดตั้ง Configure และ Commission ระบบ Schneider EcoStruxure Power SCADA รวมถึงการเขียนโปรแกรม PLC สำหรับระบบไฟฟ้า HVAC และระบบ Automation",
+      "เชื่อมต่อระบบ Modbus TCP/RTU ระหว่าง PLC, Power Meter และ SCADA Server เพื่อรองรับการ Monitoring และ Control แบบ Real-time",
+      "สนับสนุนและดูแลระบบ Infrastructure ภายใน Data Center เช่น Substation, ACMU, Generator, Fire Alarm, Gas Detection และ Leak Detection",
+      "Configure ระบบ Industrial Network โดยใช้ Cisco และ Huawei Switches รวมถึง VLAN และ Routing เพื่อรองรับการสื่อสารของระบบ Control อย่างปลอดภัย",
+      "ดำเนินการ Factory Acceptance Test (FAT), Site Acceptance Test (SAT), System Commissioning, Troubleshooting และจัดทำเอกสารทางเทคนิค",
+      "พัฒนา Grafana Dashboard และ SQL Server Report สำหรับ Monitoring ด้านพลังงานและ Infrastructure เช่น PUE, IT Load และ BTU Performance Metrics"
+    ]
+  },
+  {
+    "period": "2024",
+    "role": "Technical Support",
+    "company": "Internet Based Business Group Co., Ltd",
+    "summary": "ดูแล Technical Support, Web Technology, Database และการวิเคราะห์ปัญหาของระบบ",
+    "details": [
+      "ตรวจสอบและติดตาม User Ticket ตั้งแต่รับแจ้งปัญหาจนถึงการแก้ไขและปิด Ticket ในระบบ Ticket Database",
+      "ประสานงานกับลูกค้า Partner Dealer และ Supplier เพื่อแก้ไขปัญหาและรักษามาตรฐานการให้บริการ",
+      "สนับสนุนการ Troubleshooting ด้าน Web Technology เช่น API, HTTP, HTTPS, HTML, Data Import, JavaScript และ Database Query",
+      "ถ่ายทอดความรู้ด้าน Technical ให้กับทีมงานภายในและลูกค้าผ่านการ Training และ Product Demonstration",
+      "ให้ Technical Support สำหรับระบบ Web และ Mobile Application ที่เกี่ยวข้องกับ CRM (Customer Relationship Management) และ Data Analytics",
+      "ตรวจสอบ วิเคราะห์ และแก้ไขปัญหาทางเทคนิคโดยใช้ Test Case, Functional Test และ Non-functional Test รวมถึง Performance Testing, System Data Analysis และ Log Analysis เพื่อค้นหา Root Cause",
+      "ทำงานร่วมกับทีม Development เพื่อปรับปรุงคุณภาพของระบบ รวมถึงการ Testing, Training และจัดทำ Documentation",
+      "ตรวจสอบ Server Performance และ System Health ผ่าน Grafana Dashboard เพื่อให้ระบบมีความเสถียรและพร้อมใช้งาน"
+    ]
+  }
+]
