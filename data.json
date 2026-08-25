@@ -1,0 +1,99 @@
+{
+  "name": "ไตรสิทธิ์ วารีรัตน์ภากร",
+  "nameEn": "Traisit Wareeratpakron",
+  "role": "System Engineer | CRM (APO) Operation Support",
+  "summary": "System Engineer มีประสบการณ์การทำงานและการใช้งาน Linux, Database, Monitoring และ Automation สำหรับระบบ Production on premise และ on cloud",
+  "email": "taisit1998@gmail.com",
+  "phone": "+66 93 198 9779",
+  "line": "ou2705",
+  "skills": [
+    "Linux Administration",
+    "Bash / Perl",
+    "MariaDB / MySQL",
+    "Oracle",
+    "Nagios / NRPE",
+    "Incident Management",
+    "Log Management",
+    "Cron-job",
+    "SQL Stored Procedures",
+    "RCA & Automation",
+    "SCADA"
+  ],
+
+  "technicalSkills": [
+    {
+      "number": "01",
+      "title": "Operating Systems",
+      "icon": "terminal",
+      "items": [
+        "Linux",
+        "Unix",
+        "Windows Server",
+        "Red Hat Enterprise Linux"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Monitoring & Observability",
+      "icon": "monitoring",
+      "items": [
+        "Nagios",
+        "NRPE",
+        "NSClient++",
+        "Dynatrace",
+        "Grafana",
+        "Prometheus",
+        "WMI"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Database",
+      "icon": "database",
+      "items": [
+        "Microsoft SQL Server",
+        "MariaDB",
+        "MySQL",
+        "Oracle Database",
+        "T-SQL",
+        "SQL"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "Scripting & Automation",
+      "icon": "automation",
+      "items": [
+        "Bash",
+        "Shell Script",
+        "PowerShell",
+        "Perl",
+        "Cron",
+        "Task Scheduler"
+      ]
+    },
+    {
+      "number": "05",
+      "title": "Container & Platform",
+      "icon": "container",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Red Hat OpenShift"
+      ]
+    },
+    {
+      "number": "06",
+      "title": "Production Operations",
+      "icon": "operations",
+      "items": [
+        "Production Support",
+        "Incident Management",
+        "Root Cause Analysis",
+        "Log Management",
+        "Problem Management",
+        "Runbook"
+      ]
+    }
+  ]
+}

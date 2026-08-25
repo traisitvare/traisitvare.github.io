@@ -1,174 +1,130 @@
 [
   {
     "id": 1,
-    "title": "SMM Social media listening",
+    "title": "SMM Social Media Listening",
     "category": "infrastructure",
-    "desc": "ดูแล Linux Red Hat แบบ on premise",
-    "tech": [
-        "Linux",
-        "social listening",
-        "MariaDB"
-    ],
+    "desc": "ดูแลระบบ Social Media Listening บน Red Hat Linux แบบ On-Premise ครอบคลุมการตรวจสอบบริการ แอปพลิเคชัน Log และฐานข้อมูล MariaDB เพื่อให้ระบบพร้อมใช้งานอย่างต่อเนื่อง",
+    "tech": ["Linux", "Red Hat", "Social Listening", "MariaDB"],
     "image": "assets/images/projects/project-1.png",
     "images": [
-        {
-            "src": "assets/images/portfolio/smm.png",
-            "caption": "ตรวจสอบสถานะการทำงานและดูแลระบบ SMM ซึ่งเป็นระบบ social listening"
-        },
-        {
-            "src": "assets/images/portfolio/maraidb.png"
-        }
+      {
+        "src": "assets/images/portfolio/smm.png",
+        "caption": "ตรวจสอบสถานะการทำงานและดูแลระบบ SMM ซึ่งเป็นแพลตฟอร์ม Social Media Listening สำหรับติดตามข้อมูลจากช่องทางออนไลน์"
+      },
+      {
+        "src": "assets/images/portfolio/maraidb.png",
+        "caption": "ตรวจสอบฐานข้อมูล MariaDB ที่รองรับระบบ SMM รวมถึงสถานะการเชื่อมต่อ Query และการใช้ทรัพยากร"
+      }
     ]
-}, 
-
+  },
   {
     "id": 2,
-    "title": "Microsoft SQL Server",
+    "title": "Microsoft SQL Server Operations",
     "category": "database",
-    "desc": "SQL Server / SSMS / database performance",
-    "tech": [
-      "Bash",
-      "Cron"
-    ],
+    "desc": "ดูแลและวิเคราะห์ Microsoft SQL Server ผ่าน SSMS ตรวจสอบ SQL Server Agent Job, Query Performance และสถานะงานประมวลผล เพื่อค้นหาและแก้ไขความผิดปกติของฐานข้อมูล",
+    "tech": ["SQL Server", "SSMS", "T-SQL", "SQL Agent Job"],
     "image": "assets/images/projects/project-2.png",
     "images": [
-      "assets/images/portfolio/workp2.png",
-      "assets/images/portfolio/workp2-1.png",
-      "assets/images/portfolio/jobssms.png"
+      {"src": "assets/images/portfolio/workp2.png", "caption": "ตรวจสอบภาพรวมการทำงานของ Microsoft SQL Server และองค์ประกอบที่เกี่ยวข้องผ่าน SSMS"},
+      {"src": "assets/images/portfolio/workp2-1.png", "caption": "วิเคราะห์ Query และข้อมูลการทำงานเพื่อสนับสนุนการแก้ไขปัญหาและปรับปรุงประสิทธิภาพ"},
+      {"src": "assets/images/portfolio/jobssms.png", "caption": "ตรวจสอบสถานะ SQL Server Agent Job เพื่อค้นหา Job ที่ล้มเหลวและดำเนินการแก้ไขได้รวดเร็วขึ้น"}
     ]
   },
   {
     "id": 3,
     "title": "Nagios Monitoring",
     "category": "monitoring",
-    "desc": "Nagios dashboard + alert/status monitoring",
-    "tech": [
-      "Nagios",
-      "NRPE",
-      "Alarm",
-      "Monitoring"
-    ],
+    "desc": "ออกแบบและดูแล Monitoring ด้วย Nagios และ NRPE สำหรับติดตาม Server, Service, Process, Disk, Memory และ Custom Check พร้อมปรับ Alarm ให้ทีมปฏิบัติการนำไป Action ได้จริง",
+    "tech": ["Nagios", "NRPE", "NSClient++", "Alarm", "Monitoring"],
     "image": "assets/images/projects/project-3.png",
     "images": [
-      "assets/images/portfolio/work3-3.png",
-      "assets/images/portfolio/work-3.jpg",
-      "assets/images/portfolio/work-3.png"
+      {"src": "assets/images/portfolio/work3-3.png", "caption": "ติดตามสถานะระบบและ Alarm ผ่าน Nagios Dashboard เพื่อให้เห็นความผิดปกติจากจุดเดียว"},
+      {"src": "assets/images/portfolio/work-3.jpg", "caption": "ตรวจสอบรายละเอียด Alert และ Service Status เพื่อระบุอุปกรณ์หรือบริการที่ต้องดำเนินการ"},
+      {"src": "assets/images/portfolio/work-3.png", "caption": "บริหาร Monitoring Check และผลการตรวจสอบสำหรับสนับสนุนงาน Production Operations"}
     ]
   },
   {
     "id": 4,
-    "title": "Linux",
-    "category": "data",
-    "desc": "Oracle + SQL Server + MariaDB / database architecture",
-    "tech": [
-      "SQL",
-      "Cron Job",
-      "MariaDB"
-    ],
+    "title": "Linux Operations & Automation",
+    "category": "automation",
+    "desc": "บริหาร Linux Server และพัฒนา Shell Script หรือ Cron Job สำหรับงานประจำ เช่น ตรวจสอบ Process, Log, Disk, Connection และงาน Batch เพื่อลดงาน Manual และความผิดพลาด",
+    "tech": ["Linux", "Shell Script", "Cron Job", "Log Management"],
     "image": "assets/images/projects/project-4.png",
     "images": [
-      "assets/images/portfolio/linux.png",
-      "assets/images/portfolio/work-cronj.png",
-      "assets/images/portfolio/work-cronjob.png"
+      {"src": "assets/images/portfolio/linux.png", "caption": "ดูแล Linux Server และตรวจสอบสถานะ Process, Service, File System และทรัพยากรของระบบ"},
+      {"src": "assets/images/portfolio/work-cronj.png", "caption": "จัดการ Cron Job เพื่อกำหนดเวลางานตรวจสอบ ประมวลผล และบำรุงรักษาระบบอัตโนมัติ"},
+      {"src": "assets/images/portfolio/work-cronjob.png", "caption": "ตรวจสอบผลการทำงานของ Scheduled Job และปรับปรุง Script ให้รองรับการปฏิบัติงานอย่างต่อเนื่อง"}
     ]
   },
   {
     "id": 5,
-    "title": "Database",
+    "title": "Database Performance Maintenance",
     "category": "database",
-    "desc": "REBUILD INDEX and UPDATE STATISTICS ",
-    "tech": [
-      "SQL Server",
-      "Oracle"
-    ],
+    "desc": "ดูแลประสิทธิภาพฐานข้อมูลด้วยการตรวจสอบ Index และ Statistics รวมถึงวิเคราะห์ Query และ Job ที่เกี่ยวข้อง เพื่อช่วยลดปัญหาการประมวลผลช้าและเพิ่มความเสถียร",
+    "tech": ["SQL Server", "Oracle", "Index Maintenance", "Statistics"],
     "image": "assets/images/projects/project-5.png",
     "images": [
-      "assets/images/portfolio/ssms1.png",
-      "assets/images/portfolio/ssmssql.png",
-      "assets/images/portfolio/jobmariadb.png"
+      {"src": "assets/images/portfolio/ssms1.png", "caption": "ตรวจสอบโครงสร้างและสถานะฐานข้อมูลผ่าน SQL Server Management Studio"},
+      {"src": "assets/images/portfolio/ssmssql.png", "caption": "ดำเนินการและตรวจสอบงาน REBUILD INDEX และ UPDATE STATISTICS เพื่อสนับสนุนประสิทธิภาพของ Query"},
+      {"src": "assets/images/portfolio/jobmariadb.png", "caption": "ตรวจสอบ Database Job และผลการประมวลผลที่เกี่ยวข้องกับงานบำรุงรักษาฐานข้อมูล"}
     ]
   },
   {
     "id": 6,
-    "title": "Grafana",
+    "title": "Grafana Observability Dashboard",
     "category": "monitoring",
-    "desc": "Grafana dashboard + metrics/monitoring",
-    "tech": [
-      "Runbook",
-      "Process"
-    ],
+    "desc": "ใช้ Grafana Dashboard เพื่อติดตาม Metrics และแนวโน้มของระบบ ช่วยให้ทีมเห็นสถานะ Performance, Resource Utilization และความผิดปกติได้อย่างรวดเร็ว",
+    "tech": ["Grafana", "Metrics", "Dashboard", "Observability"],
     "image": "assets/images/projects/project-6.png",
     "images": [
-      "assets/images/portfolio/grafana.png"
+      {"src": "assets/images/portfolio/grafana.png", "caption": "ติดตาม Metrics และสถานะระบบผ่าน Grafana Dashboard เพื่อสนับสนุนการวิเคราะห์ Performance และ Incident"}
     ]
   },
   {
     "id": 7,
-    "title": "CI/CD — Rundeck",
+    "title": "CI/CD Automation with Rundeck",
     "category": "automation",
-    "desc": "Rundeck + automation pipeline + deployment",
-    "tech": [
-      "Runbook",
-      "Process"
-    ],
+    "desc": "ใช้ Rundeck จัดการ Automation Workflow และ Deployment Runbook เพื่อให้ขั้นตอนปฏิบัติงานทำซ้ำได้ มีมาตรฐาน และลดความเสี่ยงจากการดำเนินการด้วยมือ",
+    "tech": ["Rundeck", "Automation", "Deployment", "Runbook"],
     "image": "assets/images/projects/project-7.png",
     "images": [
-      "assets/images/portfolio/rundeck.png"
+      {"src": "assets/images/portfolio/rundeck.png", "caption": "บริหาร Automation Job และ Deployment Workflow ผ่าน Rundeck เพื่อควบคุมขั้นตอนและตรวจสอบผลการทำงานได้"}
     ]
   },
   {
     "id": 8,
     "title": "Operations Knowledge Base",
     "category": "documentation",
-    "desc": "จัดทำ Runbook, WR and WR ",
-    "tech": [
-      "Runbook",
-      "Process"
-    ],
+    "desc": "จัดทำและปรับปรุง Runbook, Work Instruction, Work Request และ Knowledge Base เพื่อให้ทีมมีขั้นตอนปฏิบัติงานที่ชัดเจน ใช้อ้างอิงได้ และส่งต่อความรู้ได้สะดวก",
+    "tech": ["Runbook", "Work Instruction", "Knowledge Base", "Process"],
     "image": "assets/images/projects/project-8.png",
     "images": [
-      "assets/images/portfolio/smmactac.png"
+      {"src": "assets/images/portfolio/smmactac.png", "caption": "รวบรวมขั้นตอนตรวจสอบและแก้ไขปัญหาระบบเป็นเอกสารสำหรับใช้งานจริงและแบ่งปันภายในทีม"}
     ]
-  
-  }
-  ,
+  },
   {
     "id": 9,
     "title": "Informatica CDC",
     "category": "data",
-    "desc": "Change Data Capture (CDC) for real-time data integration and replication",
-    "tech": [
-      "Informatica",
-    "CDC",
-    "Data Replication",
-    "Database"
-    ],
+    "desc": "ดูแลและตรวจสอบ Change Data Capture สำหรับงานเชื่อมโยงและ Replicate ข้อมูลแบบต่อเนื่อง พร้อมติดตามสถานะ Process และเหตุขัดข้องที่มีผลต่อ Data Flow",
+    "tech": ["Informatica", "CDC", "Data Replication", "Database"],
     "image": "assets/images/projects/project-9cdc.png",
     "images": [
-        {
-            "src": "assets/images/portfolio/cdcinfromatica.png",
-            "caption": "ตรวจสอบสถานะการทำงานและดูแลระบบ CDC Informatica"
-        }
+      {"src": "assets/images/portfolio/cdcinfromatica.png", "caption": "ตรวจสอบสถานะการทำงานของ Informatica CDC และ Data Replication เพื่อให้ข้อมูลระหว่างระบบไหลต่อเนื่อง"}
     ]
-  
-  }
-  ,
+  },
   {
     "id": 10,
     "title": "SCADA Monitoring",
     "category": "monitoring",
-    "desc": "SCADA monitoring and control system for real-time industrial operations ",
-    "tech": [
-      "SCADA",
-    "Monitoring",
-    "Alarm"
-    ],
+    "desc": "ติดตามระบบ SCADA และ Infrastructure ภายใน Data Center ผ่าน Dashboard และ Alarm เพื่อสนับสนุนการเฝ้าระวังสถานะอุปกรณ์ เหตุผิดปกติ และการดำเนินงานแบบ Real-Time",
+    "tech": ["SCADA", "Monitoring", "Alarm", "Data Center"],
     "image": "assets/images/projects/project-10.png",
     "images": [
-      "assets/images/portfolio/work-10-1.png",
-      "assets/images/portfolio/work-10-2.png",
-      "assets/images/portfolio/work-10-3.png"
+      {"src": "assets/images/portfolio/work-10-1.png", "caption": "ติดตามสถานะอุปกรณ์และระบบที่เชื่อมต่อผ่าน SCADA Monitoring Dashboard"},
+      {"src": "assets/images/portfolio/work-10-2.png", "caption": "ตรวจสอบ Alarm และข้อมูลสถานะเพื่อระบุเหตุผิดปกติที่ต้องดำเนินการ"},
+      {"src": "assets/images/portfolio/work-10-3.png", "caption": "ใช้ข้อมูลจาก SCADA สนับสนุนการเฝ้าระวังและการปฏิบัติงานภายใน Data Center"}
     ]
-  
   }
 ]
+

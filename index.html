@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="CV และ Portfolio ของ Traisit Wareeratpakron, System Engineer"
+  >
+  <meta name="theme-color" content="#07111f">
+  <title>Traisit | System Engineer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- ======================================================================
+       NAVIGATION
+       ====================================================================== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">TRAISIT<span>.</span></a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#experience">ประสบการณ์</a>
+        <a href="education.html">การศึกษา</a>
+        <a href="#projects">ผลงาน</a>
+        <a href="#technical-skills">ทักษะ</a>
+        <a href="#contact">ติดต่อ</a>
+      </div>
+
+      <div class="nav-actions">
+        <button
+          class="theme"
+          id="themeBtn"
+          type="button"
+          aria-label="สลับธีม"
+        >◐</button>
+
+        <button
+          class="theme mobile"
+          id="menuBtn"
+          type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+        >☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ====================================================================
+         HERO
+         ชื่อ ตำแหน่ง และ Summary โหลดจาก data.json ผ่าน app.js
+         ==================================================================== -->
+    <header class="container hero" id="home">
+      <div class="reveal">
+        <div class="eyebrow">Hello, I am</div>
+
+        <h1>
+          <span id="name"></span><br>
+          <span class="gradient" id="nameEn"></span>
+        </h1>
+
+        <p class="lead" id="role"></p>
+        <p id="summary"></p>
+
+        <div class="actions">
+          <a class="btn primary" href="#projects">ดูผลงาน</a>
+          <a class="btn" href="assets/pdf/cvtraisit.pdf" download>
+            ดาวน์โหลด CV
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap reveal">
+        <img
+          class="portrait"
+          src="assets/images/profile_photo.png"
+          alt="ภาพโปรไฟล์ Traisit"
+        >
+        <div class="float-card">⚡ Linux • DB • Monitoring</div>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         ABOUT
+         #skills จะถูกเติมด้วยข้อมูล skills จาก data.json ผ่าน renderSkills()
+         ==================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">ABOUT</div>
+            <h2>
+              แก้ปัญหาให้ระบบ<br>
+              <span class="gradient">ทำงานได้อย่างมั่นคง</span>
+            </h2>
+          </div>
+
+          <p>
+            เน้นการวิเคราะห์จากข้อมูลจริง สื่อสาร Root Cause ให้เข้าใจง่าย
+            และเปลี่ยนบทเรียนจาก Incident เป็น Automation กับ Runbook
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <!-- app.js สร้าง <span> ภายใน #skills จาก data.json -->
+          <article class="card about-card reveal">
+            <h3>ความเชี่ยวชาญ</h3>
+            <div class="expertise-tags" id="skills"></div>
+          </article>
+
+          <article class="card about-card reveal">
+            <h3>แนวทางการทำงาน</h3>
+            <p class="work-flow">
+              Observe → Analyze → Fix → Prevent
+            </p>
+            <p>
+              ตรวจสอบปัญหา แยกประเภท หาสาเหตุ แก้ไขและป้องกัน
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         EXPERIENCE
+         Career History โหลดจาก experience-data.json ผ่าน app.js
+         ==================================================================== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">EXPERIENCE</div>
+            <h2>
+              Professional <span class="gradient">Experience</span>
+            </h2>
+          </div>
+          <a class="btn" href="work-experience.html">ดูทั้งหมด</a>
+        </div>
+
+        <article class="card experience-focus reveal">
+          <div class="focus-side">
+            <span class="badge">CURRENT FOCUS</span>
+            <h3>System Engineer DBA</h3>
+            <p>
+              Application Database &amp;<br>
+              Production Operations
+            </p>
+          </div>
+
+          <div class="focus-main">
+            <div class="mini-title">KEY RESPONSIBILITIES</div>
+            <ul class="check-list">
+              <li>ดูแล Enterprise Application ใน Production Environment</li>
+              <li>วิเคราะห์ Incident ครอบคลุม Application, Server, Database, Network และ Log</li>
+              <li>ตรวจสอบ CPU, Memory, Disk, Process, Service และ Database Job</li>
+              <li>พัฒนา Custom Monitoring ด้วย Nagios, NRPE, NSClient++, PowerShell และ SQL</li>
+              <li>บริหาร Log Rotation, Archival และ Retention</li>
+              <li>ประสานงาน Application, Infrastructure, Database, NOC และ Vendor</li>
+              <li>จัดทำ Incident Report, RCA, Work Instruction และ Runbook</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="career-title reveal">
+          <h3>Career History</h3>
+          <span>ประสบการณ์การทำงานแบบย่อ</span>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         EDUCATION PREVIEW
+         ==================================================================== -->
+    <section id="education-preview">
+      <div class="container">
+        <div class="card education-preview reveal">
+          <div>
+            <div class="eyebrow">EDUCATION</div>
+            <h2>ประวัติการศึกษาและหลักสูตร</h2>
+            <p>ดูวุฒิการศึกษา หลักสูตร และใบรับรองที่เกี่ยวข้อง</p>
+          </div>
+          <a class="btn primary" href="education.html">
+            ดูประวัติการศึกษา
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PROJECTS
+         โหลดจาก gallery-data.json ผ่าน app.js
+         ==================================================================== -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">SELECTED WORK</div>
+            <h2>ผลงานเด่น</h2>
+          </div>
+          <p>
+            Infrastructure, Monitoring, Database, Automation
+            และ Operational Improvement
+          </p>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" type="button" data-filter="all">ทั้งหมด</button>
+          <button class="filter" type="button" data-filter="infrastructure">Infrastructure</button>
+          <button class="filter" type="button" data-filter="monitoring">Monitoring</button>
+          <button class="filter" type="button" data-filter="automation">Automation</button>
+          <button class="filter" type="button" data-filter="data">Data</button>
+          <button class="filter" type="button" data-filter="database">Database</button>
+          <button class="filter" type="button" data-filter="documentation">Documentation</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         TECHNICAL SKILLS
+         โหลดจาก technicalSkills ใน data.json ผ่าน app.js
+         ==================================================================== -->
+    <section id="technical-skills" class="skills-section">
+      <div class="container">
+        <div class="skills-heading reveal">
+          <div class="eyebrow">TOOLBOX</div>
+          <h2>
+            Technical <span class="gradient">Skills</span>
+          </h2>
+        </div>
+
+        <div
+          class="skills-matrix reveal"
+          id="technicalSkills"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT
+         Email, Phone และ Line โหลดจาก data.json
+         ==================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <div class="eyebrow">CONTACT</div>
+          <h2>
+            Traisit Au<br>
+            <span class="gradient">production systems engineer.</span>
+          </h2>
+          <p>ช่องทางติดต่อ</p>
+        </div>
+
+        <div class="terminal-contact-wrap reveal">
+          <div class="terminal-contact">
+            <div class="terminal-bar">
+              <div class="terminal-lights">
+                <span></span><span></span><span></span>
+              </div>
+              <small>system-contact.sh</small>
+            </div>
+
+            <div class="terminal-body">
+              <p><b>$</b> ./contact_traisit.sh</p>
+
+              <p>
+                <i>✓</i>
+                Email
+                <a id="emailDisplayLink" href="mailto:taisit1998@gmail.com">
+                  <span id="email"></span>
+                </a>
+              </p>
+
+              <p>
+                <i>✓</i>
+                Phone
+                <a id="phoneLink" href="tel:+66931989779">
+                  <span id="phone"></span>
+                </a>
+              </p>
+
+              <p>
+                <i>✓</i>
+                Line
+                <a
+                  id="lineLink"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span id="line"></span>
+                </a>
+              </p>
+
+              <p>
+                <i>✓</i>
+                Availability
+                <em>READY TO CONNECT</em>
+              </p>
+
+              <p class="terminal-command">
+                <b>$</b>
+                <a id="emailLink" href="mailto:taisit1998@gmail.com">
+                  send-message --email ↗
+                </a>
+                <span class="terminal-cursor"></span>
+              </p>
+            </div>
+          </div>
+
+          <span class="terminal-orbit orbit-linux">Linux</span>
+          <span class="terminal-orbit orbit-sql">SQL</span>
+          <span class="terminal-orbit orbit-nagios">Nagios</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Created by Traisit Wareeratpakron.
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       PROJECT IMAGE MODAL
+       ====================================================================== -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+
+    <div
+      class="modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-label="ภาพผลงาน"
+    >
+      <button
+        id="modalClose"
+        class="modal-close"
+        type="button"
+        aria-label="ปิด"
+      >×</button>
+
+      <button
+        id="modalPrev"
+        class="modal-prev"
+        type="button"
+        aria-label="รูปก่อนหน้า"
+      >‹</button>
+
+      <div class="modal-media">
+        <img id="modalImage" alt="Project image">
+        <p id="modalCaption"></p>
+        <div id="modalDots" class="modal-dots"></div>
+      </div>
+
+      <button
+        id="modalNext"
+        class="modal-next"
+        type="button"
+        aria-label="รูปถัดไป"
+      >›</button>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

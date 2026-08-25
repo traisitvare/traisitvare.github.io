@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ประสบการณ์ทำงานของ Traisit Wareeratpakron">
+  <meta name="theme-color" content="#07111f">
+  <title>ประสบการณ์ทำงาน | Traisit</title>
+
+  <!-- โหลด CSS หลักของเว็บไซต์ ต้องเป็นแท็ก link แบบนี้เท่านั้น -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Style เฉพาะหน้านี้ เพื่อให้กลับเป็น Card แบบเดิม -->
+  <style>
+    /* ================================================================
+       WORK EXPERIENCE PAGE LAYOUT
+       ================================================================ */
+    .work-page {
+      min-height: calc(100vh - 72px);
+      padding: 58px 0 90px;
+    }
+
+    .work-page-container {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .work-page-heading {
+      margin-bottom: 22px;
+    }
+
+    .work-page-heading h1 {
+      margin: 7px 0 0;
+      color: var(--text);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.25;
+    }
+
+    /* ================================================================
+       EXPERIENCE LIST
+       ไม่มีเส้น Timeline แต่ละรายการเป็น Card แยกกัน
+       ================================================================ */
+    .experience-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .experience-card {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 24px;
+      padding: 25px 28px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(145deg, var(--card), var(--surface));
+      box-shadow: var(--shadow);
+    }
+
+    .experience-period {
+      padding-top: 2px;
+      color: var(--brand);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .experience-content {
+      min-width: 0;
+    }
+
+    .experience-role {
+      margin: 0 0 4px;
+      color: var(--text);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .experience-company {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .experience-summary {
+      margin: 0 0 13px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .experience-details {
+      display: grid;
+      gap: 5px;
+      margin: 0;
+      padding-left: 17px;
+    }
+
+    .experience-details li {
+      padding-left: 3px;
+      color: var(--text);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .experience-details li::marker {
+      color: var(--brand);
+    }
+
+    .experience-status {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(145deg, var(--card), var(--surface));
+      color: var(--muted);
+    }
+
+    .experience-status.error {
+      color: #ff8896;
+    }
+
+    /* ================================================================
+       MOBILE
+       ================================================================ */
+    @media (max-width: 700px) {
+      .work-page {
+        padding: 44px 0 65px;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 22px 19px;
+      }
+
+      .experience-role {
+        font-size: 16px;
+      }
+
+      .experience-details li {
+        font-size: 10.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================================================================
+       NAVIGATION
+       ================================================================== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">TRAISIT<span>.</span></a>
+      <a class="btn" href="index.html">← กลับหน้าหลัก</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================================================================
+         WORK EXPERIENCE
+         ข้อมูลทั้งหมดโหลดจาก experience-data.json
+         ================================================================ -->
+    <section class="work-page">
+      <div class="work-page-container">
+        <header class="work-page-heading">
+          <div class="eyebrow">CAREER</div>
+          <h1>ประสบการณ์ทำงาน</h1>
+        </header>
+
+        <!-- JavaScript จะสร้าง Card ลงในพื้นที่นี้ -->
+        <div class="experience-list" id="experienceList">
+          <div class="experience-status">กำลังโหลดข้อมูลประสบการณ์ทำงาน...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="work-page-container">
+      © <span id="year"></span> Created by Traisit Wareeratpakron.
+    </div>
+  </footer>
+
+  <script>
+    /* ป้องกันข้อความจาก JSON ถูกแปลเป็น HTML */
+    function escapeHTML(value = '') {
+      return String(value).replace(
+        /[&<>"']/g,
+        character => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        })[character]
+      );
+    }
+
+    /* โหลดข้อมูลจาก experience-data.json */
+    async function getExperienceData() {
+      const response = await fetch('experience-data.json');
+
+      if (!response.ok) {
+        throw new Error(`Cannot load experience-data.json: HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (!Array.isArray(data)) {
+        throw new Error('experience-data.json ต้องเป็น Array');
+      }
+
+      return data;
+    }
+
+    /* รองรับทั้ง details และ responsibilities */
+    function getDetails(item) {
+      if (Array.isArray(item.details)) {
+        return item.details;
+      }
+
+      if (Array.isArray(item.responsibilities)) {
+        return item.responsibilities;
+      }
+
+      return [];
+    }
+
+    /* สร้าง Card: ปีซ้าย รายละเอียดขวา */
+    function renderExperiences(items = []) {
+      const container = document.getElementById('experienceList');
+
+      if (!container) {
+        return;
+      }
+
+      if (!items.length) {
+        container.innerHTML = '<div class="experience-status">ไม่พบข้อมูลประสบการณ์ทำงาน</div>';
+        return;
+      }
+
+      container.innerHTML = items.map(item => {
+        const details = getDetails(item);
+
+        return `
+          <article class="experience-card">
+            <div class="experience-period">
+              ${escapeHTML(item.period || '')}
+            </div>
+
+            <div class="experience-content">
+              <h2 class="experience-role">
+                ${escapeHTML(item.role || '')}
+              </h2>
+
+              <h3 class="experience-company">
+                ${escapeHTML(item.company || '')}
+              </h3>
+
+              ${item.summary ? `
+                <p class="experience-summary">
+                  ${escapeHTML(item.summary)}
+                </p>
+              ` : ''}
+
+              ${details.length ? `
+                <ul class="experience-details">
+                  ${details.map(detail => `
+                    <li>${escapeHTML(detail)}</li>
+                  `).join('')}
+                </ul>
+              ` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /* เริ่มต้นหน้า Work Experience */
+    async function initWorkExperiencePage() {
+      const year = document.getElementById('year');
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+      try {
+        const items = await getExperienceData();
+        renderExperiences(items);
+      } catch (error) {
+        console.error(error);
+
+        const container = document.getElementById('experienceList');
+
+        if (container) {
+          container.innerHTML = `
+            <div class="experience-status error">
+              ไม่สามารถโหลด experience-data.json ได้ กรุณาตรวจสอบรูปแบบ JSON
+            </div>
+          `;
+        }
+      }
+    }
+
+    initWorkExperiencePage();
+  </script>
+</body>
+</html>

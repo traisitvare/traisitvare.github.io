@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ประวัติการศึกษาของ Traisit Wareeratpakron">
+  <meta name="theme-color" content="#07111f">
+  <title>ประวัติการศึกษา | Traisit</title>
+
+  <!-- CSS หลักของเว็บไซต์ -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- CSS เฉพาะหน้า Education -->
+  <link rel="stylesheet" href="assets/css/education.css">
+</head>
+<body>
+  <!-- ======================================================================
+       EDUCATION NAVIGATION
+       ====================================================================== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">TRAISIT<span>.</span></a>
+      <a class="btn" href="index.html">← กลับหน้าหลัก</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ====================================================================
+         EDUCATION SECTION
+         JavaScript อ่าน education-data.json และสร้าง Card ใน #educationList
+         ==================================================================== -->
+    <section class="education-page">
+      <div class="container">
+        <header class="education-page-heading reveal">
+          <div class="eyebrow">EDUCATION</div>
+          <h1>ประวัติการศึกษา</h1>
+        </header>
+
+        <!-- JavaScript จะสร้าง Education Card ภายใน Element นี้ -->
+        <div class="education-list" id="educationList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Created by Traisit Wareeratpakron.
+    </div>
+  </footer>
+
+  <script>
+    /* ======================================================================
+       FALLBACK EDUCATION
+       ใช้เมื่อ education-data.json โหลดไม่ได้หรือมี Syntax Error
+       ====================================================================== */
+    const fallbackEducation = [
+      {
+        period: '2019–2022',
+        degree: "bachelor's degree",
+        institution: "KING MONGKUT'S INSTITUTE OF TECHNOLOGY LADKRABAN (KMITL)",
+        description: 'Engineering Program in Production Design and Materials Engineering',
+        image: 'assets/images/education/kmitl.png'
+      }
+    ];
+
+    /* ป้องกันข้อความจาก JSON ถูกตีความเป็น HTML */
+    function escapeHTML(value = '') {
+      return String(value).replace(
+        /[&<>"']/g,
+        character => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        })[character]
+      );
+    }
+
+    /* โหลดข้อมูลจาก education-data.json */
+    async function getEducationData() {
+      try {
+        const response = await fetch('education-data.json');
+
+        if (!response.ok) {
+          throw new Error(`Cannot load education-data.json: HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          throw new Error('education-data.json ต้องเป็น Array');
+        }
+
+        return data;
+      } catch (error) {
+        console.warn(error.message);
+        return fallbackEducation;
+      }
+    }
+
+    /* สร้าง Card แนวนอน รูปซ้าย รายละเอียดขวา */
+    function renderEducation(items = []) {
+      const educationList = document.getElementById('educationList');
+
+      if (!educationList) {
+        console.warn('ไม่พบ Element id="educationList"');
+        return;
+      }
+
+      educationList.innerHTML = items.map(item => `
+        <article class="education-card reveal">
+          <div class="education-image-wrap">
+            <img
+              class="education-image"
+              src="${escapeHTML(item.image)}"
+              alt="${escapeHTML(item.institution)}"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="education-content">
+            <span class="education-period">${escapeHTML(item.period)}</span>
+            <h2 class="education-degree">${escapeHTML(item.degree)}</h2>
+            <h3 class="education-institution">${escapeHTML(item.institution)}</h3>
+            <p class="education-description">${escapeHTML(item.description)}</p>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    /* เริ่มต้นหน้า Education */
+    async function initEducationPage() {
+      const educationData = await getEducationData();
+      renderEducation(educationData);
+
+      document.querySelectorAll('.reveal').forEach(element => {
+        element.classList.add('show');
+      });
+
+      const year = document.getElementById('year');
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    }
+
+    initEducationPage();
+  </script>
+</body>
+</html>
