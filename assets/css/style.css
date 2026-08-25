@@ -1,0 +1,288 @@
+/* ============================================================================
+   CV PORTFOLIO - MAIN STYLESHEET
+   File: assets/css/style.css
+
+   จุดที่แก้บ่อย
+   - สีหลักของเว็บ: แก้ตัวแปรใน :root
+   - ความกว้างเนื้อหา: แก้ .container
+   - ขนาดรูปโปรไฟล์: แก้ .portrait
+   - จำนวนคอลัมน์ผลงาน: แก้ .project-grid
+   - หน้าจอมือถือ: แก้ @media ด้านท้ายไฟล์
+   ============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Roboto+Mono:wght@500&display=swap');
+
+/* 1) THEME VARIABLES */
+:root{--bg:#07111f;--surface:#0d1b2d;--card:#11243a;--text:#eef6ff;--muted:#9fb2c7;--brand:#5eead4;--brand2:#60a5fa;--line:rgba(255,255,255,.1);--shadow:0 18px 60px rgba(0,0,0,.26)}
+[data-theme="light"]{--bg:#f5f8fc;--surface:#fff;--card:#fff;--text:#10233b;--muted:#60758d;--brand:#0f9688;--brand2:#2563eb;--line:rgba(16,35,59,.12);--shadow:0 18px 50px rgba(24,57,99,.12)}
+
+/* 2) BASE LAYOUT และ SHARED COMPONENTS */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:Prompt,sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+section{padding:90px 0}
+.gradient{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{color:var(--brand);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);border-radius:12px;color:var(--text);font-weight:600;text-decoration:none;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{border:0;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#05111f}
+.card{padding:26px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,var(--card),var(--surface));box-shadow:var(--shadow)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
+.section-head h2{margin:0;font-size:clamp(34px,5vw,58px)}
+.section-head p{max-width:520px;color:var(--muted)}
+
+/* 3) NAVIGATION */
+.nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 83%,transparent);backdrop-filter:blur(14px)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{color:var(--text);font:700 20px 'Roboto Mono';text-decoration:none}.logo span{color:var(--brand)}
+.nav-links{display:flex;gap:22px}.nav-links a{color:var(--muted);font-size:14px;text-decoration:none}.nav-links a:hover{color:var(--brand)}
+.nav-actions{display:flex;gap:8px}.theme{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);cursor:pointer}.mobile{display:none}
+
+/* 4) HERO */
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding:80px 0}
+.hero h1{margin:14px 0;font-size:clamp(42px,7vw,78px);line-height:1.08}.lead{font-size:19px;color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.portrait-wrap{position:relative}.portrait{display:block;width:100%;max-width:420px;margin:auto;filter:drop-shadow(var(--shadow))}
+.float-card{position:absolute;right:0;bottom:10%;padding:14px 18px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--surface) 86%,transparent);box-shadow:var(--shadow)}
+
+/* 5) ABOUT - ความเชี่ยวชาญและแนวทางการทำงาน */
+.about-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.about-card{min-height:210px}.about-card h3{margin-top:0}.about-card>p{color:var(--muted)}
+.expertise-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.expertise-tags span{padding:7px 11px;border:1px solid color-mix(in srgb,var(--brand) 38%,transparent);border-radius:99px;background:color-mix(in srgb,var(--brand) 9%,transparent);color:var(--brand);font-size:12px}
+.work-flow{margin:20px 0 13px!important;color:var(--text)!important;font-family:'Roboto Mono',monospace;font-weight:500}
+
+/* 6) FEATURED EXPERIENCE */
+.experience-focus{display:grid;grid-template-columns:.38fr .62fr;padding:0;overflow:hidden}.focus-side,.focus-main{padding:36px}.focus-side{border-right:1px solid var(--line)}
+.focus-side h3{margin:24px 0 8px;font-size:25px}.focus-side p{color:var(--muted)}.badge{padding:6px 10px;border:1px solid color-mix(in srgb,var(--brand) 35%,transparent);border-radius:99px;color:var(--brand);font:500 10px 'Roboto Mono'}
+.mini-title{margin-bottom:17px;color:var(--brand2);font:600 10px 'Roboto Mono';letter-spacing:.12em}.check-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}.check-list li{position:relative;padding-left:25px;color:var(--muted);font-size:13px}.check-list li::before{content:'✓';position:absolute;left:0;color:var(--brand)}
+
+/* 7) CAREER HISTORY - VERTICAL TIMELINE */
+.career-title{display:flex;justify-content:space-between;align-items:end;margin:55px 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)}.career-title span{color:var(--muted);font-size:12px}
+.timeline{position:relative;display:block;padding-left:34px}.timeline::before{content:'';position:absolute;top:0;bottom:0;left:7px;width:1px;background:linear-gradient(to bottom,var(--brand),var(--line) 75%,transparent)}
+.career-item{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;padding:26px 0 30px;border-bottom:1px solid var(--line)}
+.career-item::before{content:'';position:absolute;top:34px;left:-33px;width:13px;height:13px;border:3px solid var(--bg);border-radius:50%;background:var(--brand);box-shadow:0 0 0 1px var(--brand)}
+.career-period{color:var(--brand);font-family:'Roboto Mono',monospace;font-size:13px;font-weight:500}.career-role-row{display:flex;align-items:center;justify-content:space-between;gap:20px}.career-role-row h3{margin:0;font-size:20px}.career-arrow{color:var(--brand)}
+.career-content h4{margin:5px 0 10px;color:var(--muted);font-weight:400}.career-content p{max-width:780px;margin:0;color:var(--muted);font-size:14px}
+.education-preview{display:flex;align-items:center;justify-content:space-between}.education-preview p{color:var(--muted)}
+
+/* 8) PROJECT FILTER และ PROJECT CARDS */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.filter{padding:9px 15px;border:1px solid var(--line);border-radius:99px;background:transparent;color:var(--muted);cursor:pointer}.filter.active{background:var(--brand);color:#05201e}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{padding:0;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-6px)}.project-cover{width:100%;aspect-ratio:16/10;object-fit:cover}.project-body{padding:22px}.project-body h3{margin:0}.project-body p{color:var(--muted);font-size:14px}
+.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{padding:6px 9px;border:1px solid color-mix(in srgb,var(--brand) 35%,transparent);border-radius:99px;color:var(--brand);font-size:11px}
+.work-images{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.work-images img{width:100%;height:105px;object-fit:cover;border-radius:10px;cursor:zoom-in}
+
+/* 9) TECHNICAL SKILLS - Matrix Style ตามภาพตัวอย่างแรก */
+.skills-section{background:color-mix(in srgb,var(--surface) 30%,var(--bg))}
+.skills-heading{margin-bottom:48px}.skills-heading h2{margin:10px 0 0;font-size:clamp(42px,6vw,68px);line-height:1.1}
+.skills-matrix{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.skill-matrix-item{min-height:160px;padding:31px 34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.skill-matrix-item:nth-child(2n){border-right:0}.skill-matrix-item:nth-last-child(-n+2){border-bottom:0}
+.skill-number{display:block;margin-bottom:6px;color:var(--brand);font:600 11px 'Roboto Mono'}
+.skill-matrix-item h3{margin:0 0 15px;font-size:18px}.skill-matrix-tags{display:flex;flex-wrap:wrap;gap:7px}
+.skill-matrix-tag{padding:6px 10px;border:1px solid var(--line);border-radius:7px;color:var(--text);font:500 10px 'Roboto Mono';background:color-mix(in srgb,var(--surface) 55%,transparent)}
+
+/* 10) CONTACT - Terminal Style ตามภาพตัวอย่างที่ 2 */
+.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.contact-copy h2{margin:12px 0 18px;font-size:clamp(38px,5vw,60px);line-height:1.15}.contact-copy p{color:var(--muted)}
+.terminal-contact-wrap{position:relative;min-height:420px;display:grid;place-items:center}.terminal-contact{position:relative;z-index:2;width:100%;max-width:600px;border:1px solid color-mix(in srgb,var(--brand2) 32%,var(--line));border-radius:18px;background:color-mix(in srgb,var(--surface) 82%,var(--bg));box-shadow:0 35px 80px rgba(0,0,0,.28);overflow:hidden}
+.terminal-bar{height:48px;display:flex;align-items:center;padding:0 17px;border-bottom:1px solid var(--line)}.terminal-lights{display:flex;gap:7px}.terminal-lights span{width:9px;height:9px;border-radius:50%;background:#ff6374}.terminal-lights span:nth-child(2){background:#ffc24f}.terminal-lights span:nth-child(3){background:#48d9a0}.terminal-bar small{margin-left:auto;color:var(--muted);font:10px 'Roboto Mono'}
+.terminal-body{padding:28px;font:13px/2.35 'Roboto Mono';color:var(--muted)}.terminal-body p{margin:0}.terminal-body b{color:var(--brand2)}.terminal-body i{color:var(--brand);font-style:normal}.terminal-body em{float:right;color:#ccece6;font-style:normal}.terminal-body a{float:right;color:var(--text);text-decoration:none}.terminal-body a:hover{color:var(--brand)}
+.terminal-command a{float:none;color:var(--brand)}.terminal-cursor{display:inline-block;width:8px;height:15px;margin-left:7px;vertical-align:middle;background:var(--brand);animation:blink 1s infinite}
+.terminal-orbit{position:absolute;z-index:3;display:grid;place-items:center;border:1px solid var(--line);background:var(--surface);color:var(--muted);font:600 10px 'Roboto Mono';box-shadow:var(--shadow)}.orbit-linux{top:24px;right:20px;width:72px;height:72px;border-radius:20px;transform:rotate(7deg)}.orbit-sql{left:5px;bottom:35px;width:62px;height:62px;border-radius:50%}.orbit-nagios{right:45px;bottom:10px;width:80px;height:45px;border-radius:12px}
+@keyframes blink{50%{opacity:0}}
+
+/* 11) FOOTER และ REVEAL */
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.show{opacity:1;transform:none}
+
+/* 12) PROJECT IMAGE MODAL */
+.modal{position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.82);opacity:0;visibility:hidden;transition:.25s}.modal.show{opacity:1;visibility:visible}.modal-overlay{position:absolute;inset:0}.modal-box{position:relative;z-index:1;width:min(1050px,92vw);padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.modal-media{text-align:center}.modal-media img{max-width:100%;max-height:72vh;border-radius:12px}.modal-media p{color:var(--text)}.modal-close,.modal-prev,.modal-next{position:absolute;z-index:2;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}.modal-close{top:10px;right:10px;width:42px;height:42px;font-size:28px}.modal-prev,.modal-next{top:50%;width:45px;height:45px;font-size:32px}.modal-prev{left:10px}.modal-next{right:10px}.modal-dots{display:flex;justify-content:center;gap:7px}.modal-dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}.modal-dot.active{width:24px;border-radius:99px;background:var(--brand)}
+
+/* 13) TABLET RESPONSIVE */
+@media(max-width:900px){
+  .mobile{display:block}.nav-links{position:fixed;inset:72px 0 auto;display:none;flex-direction:column;padding:24px;background:var(--surface)}.nav-links.open{display:flex}
+  .hero,.experience-focus,.contact-layout{grid-template-columns:1fr}.portrait-wrap{order:-1}.portrait{max-width:280px}.project-grid{grid-template-columns:1fr}.focus-side{border-right:0;border-bottom:1px solid var(--line)}
+  .section-head{display:block}.education-preview{display:block}.contact-copy{text-align:center}.terminal-contact-wrap{min-height:390px}
+}
+
+/* 14) MOBILE RESPONSIVE */
+@media(max-width:700px){
+  .about-cards,.skills-matrix{grid-template-columns:1fr}.skill-matrix-item,.skill-matrix-item:nth-child(2n),.skill-matrix-item:nth-last-child(-n+2){border-right:0;border-bottom:1px solid var(--line)}.skill-matrix-item:last-child{border-bottom:0}
+  .focus-side,.focus-main{padding:26px}.career-title{display:block}.timeline{padding-left:26px}.timeline::before{left:5px}.career-item{grid-template-columns:1fr;gap:8px;padding:23px 0}.career-item::before{top:29px;left:-26px;width:11px;height:11px}
+  .terminal-contact-wrap{min-height:330px}.terminal-body{padding:22px 17px;font-size:10px}.terminal-orbit{display:none}.skills-heading h2{font-size:42px}.skill-matrix-item{min-height:auto;padding:25px 23px}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.terminal-cursor{animation:none}}
+
+/* ==========================================================================
+   EDUCATION PAGE
+   รูปแบบ Card แนวนอนตามดีไซน์เดิม
+   ========================================================================== */
+
+.education-page {
+  min-height: calc(100vh - 80px);
+  padding: 70px 0 100px;
+}
+
+
+/* หัวข้อหน้า Education */
+.education-page-heading {
+  margin-bottom: 32px;
+}
+
+.education-page-heading h1 {
+  margin: 10px 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* Container สำหรับ Education Card หลายรายการ */
+.education-list {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* ==========================================================================
+   EDUCATION CARD
+
+   ใช้ Grid 2 คอลัมน์:
+   คอลัมน์ซ้าย = รูป
+   คอลัมน์ขวา = ข้อมูล
+   ========================================================================== */
+
+.education-card {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(18, 42, 67, 0.96),
+      rgba(12, 31, 51, 0.96)
+    );
+
+  border: 1px solid rgba(91, 157, 204, 0.27);
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================================================
+   EDUCATION IMAGE
+
+   จำกัดขนาดรูปไม่ให้ขยายเต็ม Card
+   ========================================================================== */
+
+.education-image-wrap {
+  width: 210px;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+
+/*
+  object-fit: contain
+  แสดงโลโก้ครบทั้งภาพ โดยไม่ตัดส่วนใดออก
+*/
+.education-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 8px;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* ==========================================================================
+   EDUCATION CONTENT
+   ========================================================================== */
+
+.education-content {
+  min-width: 0;
+}
+
+
+/* ปีการศึกษา */
+.education-period {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #8bb6d9;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+
+/* ชื่อวุฒิ */
+.education-degree {
+  margin: 0 0 8px;
+
+  color: var(--text, #f5f8ff);
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+
+/* ชื่อสถาบัน */
+.education-institution {
+  margin: 0 0 12px;
+
+  color: #35e0c1;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+
+/* รายละเอียดหลักสูตร */
+.education-description {
+  margin: 0;
+
+  color: var(--muted, #b7c7d9);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+
+/* ==========================================================================
+   EDUCATION RESPONSIVE
+
+   หน้าจอเล็กเปลี่ยนเป็นแนวตั้ง แต่รูปยังไม่ขยายเต็มความกว้าง
+   ========================================================================== */
+
+@media (max-width: 700px) {
+
+  .education-page {
+    padding-top: 48px;
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .education-image-wrap {
+    width: min(210px, 100%);
+    height: 145px;
+  }
+
+}
