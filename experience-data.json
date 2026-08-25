@@ -1,9 +1,9 @@
 [
   {
-    "period": "ปัจจุบัน",
+    "period": "Jan 2026 - Current",
     "role": "System Engineer",
-    "company": "Advanced Info Service Public Company Limited (System Engineer)",
-    "summary": "ดูแล Production, Database, Linux Server, Monitoring และ Automation เพื่อให้ระบบมีเสถียรภาพและพร้อมใช้งาน",
+    "company": "Advanced Info Service Public Company Limited (AIS)",
+    "summary": "ดูแล Web Production, Database, Linux Server, Monitoring และ Automation เพื่อให้ระบบทำงานได้อย่างต่อเนื่อง",
     "details": [
         "ดูแลระบบ Production และ High Availability ให้พร้อมใช้งาน มีเสถียรภาพ และสามารถให้บริการได้อย่างต่อเนื่อง",
     "รับผิดชอบงานด้าน Database, Linux Server และ System โดยติดตามสถานะของระบบ วิเคราะห์ปัญหา และดำเนินการแก้ไขเมื่อพบความผิดปกติ",
@@ -31,7 +31,7 @@
   {
     "period": "2025",
     "role": "System  Engineer",
-    "company": "Data center",
+    "company": "rojpaiboon equipment co. ltd Site Data center GSA",
     "summary": "ดูแล SCADA, Data Center Monitoring, Infrastructure และ Automation ภายใน Data Center",
     "details": [
       "พัฒนาและดูแลโครงการ Data Center ได้แก่ SCADA, Data Center Monitoring และ Main Environmental Control Systems (ECMS) โดยใช้ EcoStruxure Power SCADA Expert (PME), EBO, Microsoft SQL Server, Docker และ VMware",
